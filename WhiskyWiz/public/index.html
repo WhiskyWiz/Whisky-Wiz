@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhiskyWiz - Your Ultimate Whisky Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1>WhiskyWiz</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search for whisky...">
+          <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#" id="browse-link">Browse</a>
+          <a href="#" id="reviews-link">Reviews</a>
+          <a href="#" id="prices-link">Prices</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Discover the World of Whisky</h2>
+          <p>Explore detailed information about every whisky bottle, find the best prices, and read authentic reviews.</p>
+          <div class="hero-buttons">
+            <button id="explore-button" class="btn btn-primary">Explore Whiskies</button>
+            <button id="top-rated-button" class="btn btn-secondary">Top Rated</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-whiskies">
+      <div class="container">
+        <h2 class="section-title">Featured Whiskies</h2>
+        <div class="whisky-grid" id="featured-whiskies-grid">
+          <!-- Whisky cards will be dynamically inserted here -->
+          <div class="loading-spinner" id="featured-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="whisky-categories">
+      <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="category-grid">
+          <div class="category-card" data-category="Single Malt">
+            <i class="fas fa-glass-whiskey"></i>
+            <h3>Single Malt</h3>
+          </div>
+          <div class="category-card" data-category="Blended">
+            <i class="fas fa-wine-bottle"></i>
+            <h3>Blended</h3>
+          </div>
+          <div class="category-card" data-category="Bourbon">
+            <i class="fas fa-beer"></i>
+            <h3>Bourbon</h3>
+          </div>
+          <div class="category-card" data-category="Rye">
+            <i class="fas fa-wheat"></i>
+            <h3>Rye</h3>
+          </div>
+          <div class="category-card" data-category="Japanese">
+            <i class="fas fa-torii-gate"></i>
+            <h3>Japanese</h3>
+          </div>
+          <div class="category-card" data-category="Irish">
+            <i class="fas fa-clover"></i>
+            <h3>Irish</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="whisky-details" id="whisky-details-section">
+      <div class="container">
+        <!-- Whisky details will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section class="search-results" id="search-results-section">
+      <div class="container">
+        <h2 class="section-title">Search Results</h2>
+        <div class="whisky-grid" id="search-results-grid">
+          <!-- Search results will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>WhiskyWiz</h2>
+          <p>Your Ultimate Whisky Guide</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest whisky news and updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 WhiskyWiz. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Templates -->
+  <template id="whisky-card-template">
+    <div class="whisky-card">
+      <div class="whisky-image">
+        <img src="" alt="">
+      </div>
+      <div class="whisky-info">
+        <h3 class="whisky-name"></h3>
+        <p class="whisky-distillery"></p>
+        <div class="whisky-meta">
+          <span class="whisky-type"></span>
+          <span class="whisky-age"></span>
+          <span class="whisky-abv"></span>
+        </div>
+        <div class="whisky-rating">
+          <div class="stars"></div>
+          <span class="rating-value"></span>
+          <span class="review-count"></span>
+        </div>
+        <div class="whisky-price">
+          <span class="price-from">From</span>
+          <span class="price-value"></span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
